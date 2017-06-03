@@ -11,6 +11,11 @@
     "type": "git",
     "url": "git+https://github.com/node-cloud/node-cloud-loadbalance.git"
   },
+  "ava": {
+    "require": [
+      "babel-register"
+    ]
+  },
   "keywords": [
     "node-cloud",
     "loadbalance",
@@ -26,6 +31,7 @@
   "devDependencies": {
     "ava": "^0.19.1",
     "babel-cli": "^6.24.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-env": "^1.4.0",
     "consul": "^0.28.0",
     "nyc": "^10.2.0"

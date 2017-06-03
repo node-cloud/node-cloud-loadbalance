@@ -32,11 +32,11 @@ const defaults = exports.defaults = {};
  * }}
  */
 const rule = exports.rule = {
-    BestAvailableRule: require("./rule/BestAvailableRule"),
-    AvailabilityFilteringRule: require("./rule/AvailabilityFilteringRule"),
-    RandomRule: require("./rule/RandomRule"),
-    RoundRobinRule: require("./rule/RoundRobinRule"),
-    WeightedResponseTimeRule: require("./rule/WeightedResponseTimeRule")
+    BEST_AVAILABLE_RULE: require("./rule/BestAvailableRule"),
+    AVAILABILITY_FILTERING_RULE: require("./rule/AvailabilityFilteringRule"),
+    RANDOM_RULE: require("./rule/RandomRule"),
+    ROUND_ROBIN_RULE: require("./rule/RoundRobinRule"),
+    WEIGHTED_RESPONSE_TIME_RULE: require("./rule/WeightedResponseTimeRule")
 };
 
 const context = new _LoadbalanceContext2.default();

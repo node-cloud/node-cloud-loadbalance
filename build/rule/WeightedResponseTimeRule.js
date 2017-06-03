@@ -14,3 +14,4 @@ class WeightedResponseTimeRule {
     choose(key) {}
 }
 exports.default = WeightedResponseTimeRule;
+module.exports = exports["default"];

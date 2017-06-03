@@ -89,7 +89,7 @@ class Loadbalancer {
 
 exports.default = Loadbalancer;
 function initialServices(services) {
-    return services.map(service => initialService(service)).filter(service => !service);
+    return services.map(service => initialService(service)).filter(service => service);
 }
 
 function initialService(service) {
@@ -101,7 +101,8 @@ function initialService(service) {
     service.name = service.name || service.id;
     service.zone = service.zone || 'default';
     service.state = new _ServerStats2.default();
-    this.context.loadbalanceStat.zoneMap[service.zone] = service.zone;
-    this.context.loadbalanceStat.zoneStatsMap[service.zone] = new _ZoneStats2.default(service.zone);
+    // this.context.loadbalanceStat.zoneMap[service.zone] = service.zone;
+    // this.context.loadbalanceStat.zoneStatsMap[service.zone] = new ZoneStats(service.zone);
     return service;
 }
+module.exports = exports['default'];

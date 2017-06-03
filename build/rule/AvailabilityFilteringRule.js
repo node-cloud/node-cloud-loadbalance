@@ -14,3 +14,4 @@ class AvailabilityFilteringRule {
     choose(key) {}
 }
 exports.default = AvailabilityFilteringRule;
+module.exports = exports["default"];

@@ -1,10 +1,11 @@
-import random from 'random-js';
+import Random from 'random-js';
 
 /**
  * Created by feng on 2017/4/29.
  */
 export default class RandomRule {
     constructor(loadbalancer) {
+        this.randomEngine = new Random();
         this.loadbalancer = loadbalancer;
     }
 
@@ -21,14 +22,14 @@ export default class RandomRule {
                 return null;
             }
 
-            const index = random.integer(0, serverCount);
+            const index = this.randomEngine.integer(0, serverCount - 1);
             server = reachableServers[index];
 
             if (server === null) {
                 continue;
             }
 
-            if (server.isAlive()) {
+            if (server.state.isAlive()) {
                 return server;
             }
 

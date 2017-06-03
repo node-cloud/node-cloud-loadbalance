@@ -15,3 +15,4 @@ class LoadbalanceStats {
     }
 }
 exports.default = LoadbalanceStats;
+module.exports = exports["default"];

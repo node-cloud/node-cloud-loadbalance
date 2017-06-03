@@ -15,6 +15,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  */
 class RandomRule {
     constructor(loadbalancer) {
+        this.randomEngine = new _randomJs2.default();
         this.loadbalancer = loadbalancer;
     }
 
@@ -31,14 +32,14 @@ class RandomRule {
                 return null;
             }
 
-            const index = _randomJs2.default.integer(0, serverCount);
+            const index = this.randomEngine.integer(0, serverCount - 1);
             server = reachableServers[index];
 
             if (server === null) {
                 continue;
             }
 
-            if (server.isAlive()) {
+            if (server.state.isAlive()) {
                 return server;
             }
 
@@ -49,3 +50,4 @@ class RandomRule {
     }
 }
 exports.default = RandomRule;
+module.exports = exports['default'];

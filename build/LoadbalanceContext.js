@@ -38,3 +38,4 @@ class LoadbalanceContext {
     }
 }
 exports.default = LoadbalanceContext;
+module.exports = exports['default'];

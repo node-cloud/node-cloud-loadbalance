@@ -66,3 +66,4 @@ class HttpClientDelegate {
     }
 }
 exports.default = HttpClientDelegate;
+module.exports = exports['default'];

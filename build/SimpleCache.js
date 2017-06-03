@@ -33,3 +33,4 @@ class SimpleCache {
     }
 }
 exports.default = SimpleCache;
+module.exports = exports["default"];

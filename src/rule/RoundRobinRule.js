@@ -4,6 +4,7 @@
 export default class RoundRobinRule {
     constructor(loadbalancer) {
         this.loadbalancer = loadbalancer;
+        this.counter = 0;
     }
 
     choose(key) {
@@ -20,13 +21,14 @@ export default class RoundRobinRule {
             }
 
             const nextServerIndex = this.incrementAndGetModulo(serverCount);
+            console.log(nextServerIndex);
             server = allServers[nextServerIndex];
 
             if (server === null) {
                 continue;
             }
 
-            if (server.isAlive()) {
+            if (server.state.isAlive()) {
                 return server;
             }
 

@@ -18,6 +18,10 @@ class ServerStats {
         this.activeRequestsCountTimeout = 10; //10 seconds
     }
 
+    isAlive() {
+        return true;
+    }
+
     noteResponseTime() {}
 
     getResponseTimeAvg() {}
@@ -38,3 +42,4 @@ class ServerStats {
     isCircuitBreakerTripped(currentTime) {}
 }
 exports.default = ServerStats;
+module.exports = exports["default"];

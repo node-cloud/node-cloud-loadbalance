@@ -72,3 +72,4 @@ class LoadbalanceClient {
     }
 }
 exports.default = LoadbalanceClient;
+module.exports = exports['default'];

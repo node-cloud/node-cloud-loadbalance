@@ -44,3 +44,4 @@ class BestAvailableRule extends _RoundRobinRule2.default {
     }
 }
 exports.default = BestAvailableRule;
+module.exports = exports['default'];

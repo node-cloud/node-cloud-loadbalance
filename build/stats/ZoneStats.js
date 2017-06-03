@@ -12,3 +12,4 @@ class ZoneStats {
     }
 }
 exports.default = ZoneStats;
+module.exports = exports["default"];

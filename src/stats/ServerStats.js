@@ -13,6 +13,10 @@ export default class ServerStats {
         this.activeRequestsCountTimeout = 10; //10 seconds
     }
 
+    isAlive() {
+        return true;
+    }
+
     noteResponseTime() {
 
     }
