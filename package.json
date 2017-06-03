@@ -2,7 +2,7 @@
   "name": "node-cloud-loadbalance",
   "version": "0.0.1",
   "description": "node-cloud-loadbalance",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
     "build": "babel src -d build",
     "test": "NODE_ENV=development nyc ava ./test"
