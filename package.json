@@ -1,0 +1,40 @@
+{
+  "name": "node-cloud-loadbalance",
+  "version": "0.0.1",
+  "description": "node-cloud-loadbalance",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d build",
+    "test": "NODE_ENV=development nyc ava ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-cloud/node-cloud-loadbalance.git"
+  },
+  "keywords": [
+    "node-cloud",
+    "loadbalance",
+    "lb",
+    "lb-pool"
+  ],
+  "author": "miaowing <i@zfeng.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/node-cloud/node-cloud-loadbalance/issues"
+  },
+  "homepage": "https://github.com/node-cloud/node-cloud-loadbalance#readme",
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.4.0",
+    "consul": "^0.28.0",
+    "nyc": "^10.2.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "random-js": "^1.0.8",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "uri-params": "^0.1.3"
+  }
+}
